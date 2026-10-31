@@ -2,8 +2,6 @@
 import { useState } from "react";
 import "./menu.css";
 
-import smallSplashLeft from "../../assets/smallSplashLeft.png";
-import smallSplashRight from "../../assets/smallSplashRight.png";
 import MenuJson from "../../assets/menu/sabor-de-mi-tierra-menu-clean.json";
 
 /* ==========================================
