@@ -1,0 +1,23 @@
+
+.landing-page {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: #fff3db;
+  color: #082f55;
+}
+
+.landing-page *,
+.landing-page *::before,
+.landing-page *::after {
+  box-sizing: border-box;
+}
+
+.landing-page a {
+  text-decoration: none;
+}
+
+.landing-page button,
+.landing-page a {
+  cursor: pointer;
+}

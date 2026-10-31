@@ -1,0 +1,281 @@
+
+/* ==========================================
+   ABOUT SECTION — DESIGN VARIABLES
+========================================== */
+
+.about {
+  --about-navy: #082f55;
+  --about-gold: #d4b67f;
+  --about-cream: #fce3b2;
+  --about-brown: #765b43;
+
+  position: relative;
+  isolation: isolate;
+
+  width: 100%;
+  padding: 35px 5% 45px;
+
+  background: var(--about-cream);
+
+  /* Solid navy top divider */
+  border-top: 4px solid var(--about-navy);
+
+  /* Preserve original bottom divider */
+  border-bottom: 2px solid var(--about-gold);
+}
+
+/* ==========================================
+   TOP DECORATIVE DIVIDER
+========================================== */
+
+.about::before {
+  content: "";
+
+  position: absolute;
+  top: -2px;
+  left: 50%;
+
+  width: min(80%, 950px);
+  height: 2px;
+
+  transform: translateX(-50%);
+
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    #082f55 25%,
+    #d5a247 50%,
+    #082f55 75%,
+    transparent 100%
+  );
+
+  pointer-events: none;
+}
+
+/* ==========================================
+   BOTTOM DECORATIVE DIVIDER
+========================================== */
+
+.about::after {
+  content: "";
+
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+
+  width: min(80%, 950px);
+  height: 2px;
+
+  transform: translateX(-50%);
+
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    #082f55 25%,
+    #d5a247 50%,
+    #082f55 75%,
+    transparent 100%
+  );
+
+  pointer-events: none;
+}
+
+/* ==========================================
+   FEATURE GRID
+========================================== */
+
+.about-features {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: stretch;
+
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* ==========================================
+   INDIVIDUAL FEATURE
+========================================== */
+
+.about-feature {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 0;
+  padding: 18px 16px;
+
+  text-align: center;
+}
+
+/* Feature icons */
+
+.about-feature img {
+  display: block;
+
+  width: 44px;
+  height: 44px;
+
+  object-fit: contain;
+}
+
+/* Feature titles */
+
+.about-feature h3 {
+  margin: 10px 0 5px;
+
+  font-family: var(--font-body, Arial, sans-serif);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.35;
+
+  color: var(--about-navy);
+}
+
+/* Feature subtitles */
+
+.about-feature p {
+  margin: 0;
+
+  font-family: var(--font-body, Arial, sans-serif);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.4;
+
+  color: var(--about-brown);
+}
+
+/* ==========================================
+   VERTICAL FEATURE SEPARATORS
+========================================== */
+
+.about-feature:not(:last-child)::after {
+  content: "";
+
+  position: absolute;
+  right: 0;
+  top: 15%;
+
+  width: 1px;
+  height: 70%;
+
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    #c6a36a 25%,
+    #a7854b 50%,
+    #c6a36a 75%,
+    transparent 100%
+  );
+
+  pointer-events: none;
+}
+
+/* ==========================================
+   TABLET — 651px TO 900px
+========================================== */
+
+@media (min-width: 651px) and (max-width: 900px) {
+  .about {
+    padding: 30px 4% 40px;
+  }
+
+  .about-feature {
+    padding: 14px 10px;
+  }
+
+  .about-feature img {
+    width: 38px;
+    height: 38px;
+  }
+
+  .about-feature h3 {
+    font-size: 13px;
+  }
+
+  .about-feature p {
+    font-size: 12px;
+  }
+}
+
+/* ==========================================
+   MOBILE — 650px AND BELOW
+========================================== */
+
+@media (max-width: 650px) {
+  .about {
+    padding: 25px 3% 30px;
+  }
+
+  /* Keep all four features in one row */
+
+  .about-features {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .about-feature {
+    padding: 8px 4px;
+  }
+
+  .about-feature img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .about-feature h3 {
+    margin: 8px 0 4px;
+
+    font-size: 11px;
+    line-height: 1.3;
+  }
+
+  .about-feature p {
+    font-size: 10px;
+    line-height: 1.4;
+  }
+
+  /* Smaller, subtle dividers on mobile */
+
+  .about-feature:not(:last-child)::after {
+    top: 15%;
+    height: 70%;
+  }
+
+  /* Decorative top and bottom accents */
+
+  .about::before,
+  .about::after {
+    width: 85%;
+  }
+}
+
+/* ==========================================
+   VERY SMALL MOBILE — 380px AND BELOW
+========================================== */
+
+@media (max-width: 380px) {
+  .about {
+    padding: 22px 2% 26px;
+  }
+
+  .about-feature {
+    padding: 8px 3px;
+  }
+
+  .about-feature img {
+    width: 27px;
+    height: 27px;
+  }
+
+  .about-feature h3 {
+    font-size: 10px;
+  }
+
+  .about-feature p {
+    font-size: 9px;
+  }
+}

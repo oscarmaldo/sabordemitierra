@@ -1,0 +1,1166 @@
+{
+  "restaurant": "Sabor de Mi Tierra",
+  "currency": "USD",
+  "source": "Five photographs of printed restaurant menu supplied by user",
+  "extractionNotes": [
+    "Transcribed from photographs; verify against business owner before publishing.",
+    "Menu photography in original images is not supplied as separate digital product images.",
+    "Fajitas upcharges are difficult to read; verify $1.99 / $2.99.",
+    "Breakfast base price interpreted as $14.99 for all listed egg/chilaquiles choices.",
+    "For items with separate premium meat prices, represented as separate product entries to avoid ambiguities.",
+    "No ordering availability, taxes, or inventory implied.",
+    "Availability: Menudo is labeled SOLO Sábados y Domingos in the printed Caldos menu. No other service hours shown.",
+    "imageSrc is a planned Vite src/assets location; no individual product photo files have been verified. Use import.meta.glob to resolve URLs before deployment.",
+    "Product counts are catalog records, not all independently priced item variants."
+  ],
+  "categories": [
+    {
+      "id": "desayunos",
+      "name": "Desayunos",
+      "items": [
+        {
+          "id": "desayunos-01",
+          "name": "Huevos con Jamón",
+          "price": 14.99,
+          "description": "Servido con frijoles y papas.",
+          "imageSrc": "",
+          "category": "desayunos",
+          "image": false
+        },
+        {
+          "id": "desayunos-02",
+          "name": "Huevo con Chorizo",
+          "price": 14.99,
+          "description": "Servido con frijoles y papas.",
+          "imageSrc": "",
+          "category": "desayunos",
+          "image": false
+        },
+        {
+          "id": "desayunos-03",
+          "name": "Huevos a la Mexicana",
+          "price": 14.99,
+          "description": "Servido con frijoles y papas.",
+          "imageSrc": "",
+          "category": "desayunos",
+          "image": false
+        },
+        {
+          "id": "desayunos-04",
+          "name": "Huevos Rancheros",
+          "price": 14.99,
+          "description": "Servido con frijoles y papas.",
+          "imageSrc": "",
+          "category": "desayunos",
+          "image": false
+        },
+        {
+          "id": "desayunos-05",
+          "name": "Huevos al Gusto",
+          "price": 14.99,
+          "description": "Servido con frijoles y papas.",
+          "imageSrc": "",
+          "category": "desayunos",
+          "image": false
+        },
+        {
+          "id": "desayunos-06",
+          "name": "Huevos Divorciados",
+          "price": 14.99,
+          "description": "Servido con frijoles y papas.",
+          "imageSrc": "",
+          "category": "desayunos",
+          "image": false
+        },
+        {
+          "id": "desayunos-07",
+          "name": "Chilaquiles con Huevo",
+          "price": 14.99,
+          "description": "Servido con frijoles y papas.",
+          "optionGroups": [
+            {
+              "name": "Salsa",
+              "required": true,
+              "values": [
+                {
+                  "name": "Rojos"
+                },
+                {
+                  "name": "Verdes"
+                },
+                {
+                  "name": "Mole"
+                }
+              ]
+            }
+          ],
+          "imageSrc": "",
+          "category": "desayunos",
+          "image": false
+        },
+        {
+          "id": "desayunos-08",
+          "name": "Breakfast Burrito",
+          "price": 12.99,
+          "imageSrc": "",
+          "category": "desayunos",
+          "image": false
+        }
+      ]
+    },
+    {
+      "id": "antojitos",
+      "name": "Antojitos",
+      "items": [
+        {
+          "id": "antojitos-01",
+          "name": "Tacos (carne)",
+          "price": 3.5,
+          "description": "Con tortilla recién hecha.",
+          "optionGroups": [
+            {
+              "name": "Carne",
+              "required": true,
+              "values": [
+                {
+                  "name": "Asada"
+                },
+                {
+                  "name": "Al Pastor"
+                },
+                {
+                  "name": "Carnitas"
+                },
+                {
+                  "name": "Pollo"
+                },
+                {
+                  "name": "Chorizo"
+                }
+              ]
+            }
+          ],
+          "imageSrc": "",
+          "category": "antojitos",
+          "image": false
+        },
+        {
+          "id": "antojitos-02",
+          "name": "Tacos (especiales)",
+          "price": 4.49,
+          "description": "Con tortilla recién hecha.",
+          "optionGroups": [
+            {
+              "name": "Carne",
+              "required": true,
+              "values": [
+                {
+                  "name": "Lengua"
+                },
+                {
+                  "name": "Tripa"
+                },
+                {
+                  "name": "Cabeza"
+                }
+              ]
+            }
+          ],
+          "imageSrc": "",
+          "category": "antojitos",
+          "image": false
+        },
+        {
+          "id": "antojitos-03",
+          "name": "Tacos vegetarianos",
+          "price": 4.0,
+          "description": "Con tortilla recién hecha.",
+          "optionGroups": [
+            {
+              "name": "Relleno",
+              "required": true,
+              "values": [
+                {
+                  "name": "Nopal"
+                },
+                {
+                  "name": "Rajas"
+                },
+                {
+                  "name": "Calabaza"
+                }
+              ]
+            }
+          ],
+          "imageSrc": "",
+          "category": "antojitos",
+          "image": false
+        },
+        {
+          "id": "antojitos-04",
+          "name": "Torta Cubana",
+          "price": 14.99,
+          "imageSrc": "",
+          "category": "antojitos",
+          "image": false
+        },
+        {
+          "id": "antojitos-05",
+          "name": "Torta",
+          "price": 12.99,
+          "optionGroups": [
+            {
+              "name": "Carne",
+              "required": true,
+              "values": [
+                {
+                  "name": "Asada"
+                },
+                {
+                  "name": "Al Pastor"
+                },
+                {
+                  "name": "Carnitas"
+                },
+                {
+                  "name": "Pollo"
+                },
+                {
+                  "name": "Chorizo"
+                }
+              ]
+            }
+          ],
+          "imageSrc": "",
+          "category": "antojitos",
+          "image": false
+        },
+        {
+          "id": "antojitos-06",
+          "name": "3 Flautas",
+          "price": 13.99,
+          "description": "Servido con arroz y frijol.",
+          "optionGroups": [
+            {
+              "name": "Relleno",
+              "required": true,
+              "values": [
+                {
+                  "name": "Papas"
+                },
+                {
+                  "name": "Pollo"
+                },
+                {
+                  "name": "Res"
+                }
+              ]
+            }
+          ],
+          "imageSrc": "",
+          "category": "antojitos",
+          "image": false
+        },
+        {
+          "id": "antojitos-07",
+          "name": "Burrito",
+          "price": 12.99,
+          "description": "Servido con arroz y frijoles.",
+          "optionGroups": [
+            {
+              "name": "Carne",
+              "required": true,
+              "values": [
+                {
+                  "name": "Asada"
+                },
+                {
+                  "name": "Al Pastor"
+                },
+                {
+                  "name": "Chorizo"
+                },
+                {
+                  "name": "Carnitas"
+                },
+                {
+                  "name": "Pollo"
+                }
+              ]
+            }
+          ],
+          "imageSrc": "",
+          "category": "antojitos",
+          "image": false
+        },
+        {
+          "id": "antojitos-08",
+          "name": "Burrito (carne especial)",
+          "price": 15.99,
+          "description": "Servido con arroz y frijoles.",
+          "optionGroups": [
+            {
+              "name": "Carne",
+              "required": true,
+              "values": [
+                {
+                  "name": "Lengua"
+                },
+                {
+                  "name": "Tripa"
+                },
+                {
+                  "name": "Cabeza"
+                }
+              ]
+            }
+          ],
+          "imageSrc": "",
+          "category": "antojitos",
+          "image": false
+        },
+        {
+          "id": "antojitos-09",
+          "name": "Burrito de Chile Relleno",
+          "price": 13.99,
+          "imageSrc": "",
+          "category": "antojitos",
+          "image": false
+        },
+        {
+          "id": "antojitos-10",
+          "name": "Hamburguesa",
+          "price": 10.99,
+          "description": "Servido con papas fritas.",
+          "imageSrc": "",
+          "category": "antojitos",
+          "image": false
+        },
+        {
+          "id": "antojitos-11",
+          "name": "Hotdog",
+          "price": 10.99,
+          "description": "Servido con papas fritas.",
+          "imageSrc": "",
+          "category": "antojitos",
+          "image": false
+        },
+        {
+          "id": "antojitos-12",
+          "name": "Nuggets",
+          "price": 10.99,
+          "description": "Servido con papas fritas.",
+          "imageSrc": "",
+          "category": "antojitos",
+          "image": false
+        }
+      ]
+    },
+    {
+      "id": "especialidades",
+      "name": "Especialidad de la Casa",
+      "items": [
+        {
+          "id": "especialidades-01",
+          "name": "Carne Asada",
+          "price": 17.99,
+          "description": "Servido con arroz y frijoles.",
+          "imageSrc": "",
+          "category": "especialidades",
+          "image": false
+        },
+        {
+          "id": "especialidades-02",
+          "name": "Fajitas",
+          "price": 18.99,
+          "optionGroups": [
+            {
+              "name": "Proteína",
+              "required": true,
+              "values": [
+                {
+                  "name": "Pollo"
+                },
+                {
+                  "name": "Res"
+                },
+                {
+                  "name": "Camarón",
+                  "priceDelta": 1.99
+                },
+                {
+                  "name": "Mar y Tierra",
+                  "priceDelta": 2.99
+                }
+              ]
+            }
+          ],
+          "needsReview": true,
+          "imageSrc": "",
+          "category": "especialidades",
+          "image": false
+        },
+        {
+          "id": "especialidades-03",
+          "name": "Chiles Rellenos",
+          "price": 14.99,
+          "description": "Servido con arroz y ensalada.",
+          "imageSrc": "",
+          "category": "especialidades",
+          "image": false
+        },
+        {
+          "id": "especialidades-04",
+          "name": "Bistec Ranchero",
+          "price": 16.99,
+          "description": "Servido con arroz y frijoles.",
+          "imageSrc": "",
+          "category": "especialidades",
+          "image": false
+        },
+        {
+          "id": "especialidades-05",
+          "name": "Mole",
+          "price": 15.99,
+          "description": "Servido con arroz.",
+          "imageSrc": "",
+          "category": "especialidades",
+          "image": false
+        },
+        {
+          "id": "especialidades-06",
+          "name": "Aporreadillo",
+          "price": 16.99,
+          "description": "Servido con frijoles y papa.",
+          "imageSrc": "",
+          "category": "especialidades",
+          "image": false
+        },
+        {
+          "id": "especialidades-07",
+          "name": "Morisqueta",
+          "price": 15.99,
+          "description": "Servido con arroz cocido blanco, frijoles de la olla, queso fresco; costillas o chicharrón.",
+          "optionGroups": [
+            {
+              "name": "Acompañamiento",
+              "required": true,
+              "values": [
+                {
+                  "name": "Costillas"
+                },
+                {
+                  "name": "Chicharrón"
+                }
+              ]
+            }
+          ],
+          "imageSrc": "",
+          "category": "especialidades",
+          "image": false
+        },
+        {
+          "id": "especialidades-08",
+          "name": "Enchiladas",
+          "price": 13.99,
+          "optionGroups": [
+            {
+              "name": "Relleno",
+              "required": true,
+              "values": [
+                {
+                  "name": "Queso"
+                },
+                {
+                  "name": "Pollo"
+                },
+                {
+                  "name": "Carne"
+                }
+              ]
+            },
+            {
+              "name": "Salsa",
+              "required": true,
+              "values": [
+                {
+                  "name": "Roja"
+                },
+                {
+                  "name": "Verde"
+                },
+                {
+                  "name": "Mole"
+                }
+              ]
+            }
+          ],
+          "imageSrc": "",
+          "category": "especialidades",
+          "image": false
+        },
+        {
+          "id": "especialidades-09",
+          "name": "Tacos Dorados",
+          "price": 14.99,
+          "description": "Servido con arroz y frijol.",
+          "optionGroups": [
+            {
+              "name": "Relleno",
+              "required": true,
+              "values": [
+                {
+                  "name": "Papas"
+                },
+                {
+                  "name": "Pollo"
+                },
+                {
+                  "name": "Res"
+                }
+              ]
+            }
+          ],
+          "imageSrc": "",
+          "category": "especialidades",
+          "image": false
+        },
+        {
+          "id": "especialidades-10",
+          "name": "Plato de Birria",
+          "price": 16.99,
+          "optionGroups": [
+            {
+              "name": "Carne",
+              "required": true,
+              "values": [
+                {
+                  "name": "Res"
+                },
+                {
+                  "name": "Chivo"
+                }
+              ]
+            }
+          ],
+          "imageSrc": "",
+          "category": "especialidades",
+          "image": false
+        },
+        {
+          "id": "especialidades-11",
+          "name": "Ramen Birria",
+          "price": 13.99,
+          "imageSrc": "",
+          "category": "especialidades",
+          "image": false
+        },
+        {
+          "id": "especialidades-12",
+          "name": "Quesabirrias",
+          "price": 13.99,
+          "optionGroups": [
+            {
+              "name": "Extra",
+              "required": false,
+              "values": [
+                {
+                  "name": "Sin extra"
+                },
+                {
+                  "name": "Consomé",
+                  "priceDelta": 1.5
+                }
+              ]
+            }
+          ],
+          "imageSrc": "",
+          "category": "especialidades",
+          "image": false
+        },
+        {
+          "id": "especialidades-13",
+          "name": "Quesadilla",
+          "price": 12.99,
+          "optionGroups": [
+            {
+              "name": "Carne",
+              "required": true,
+              "values": [
+                {
+                  "name": "Asada"
+                },
+                {
+                  "name": "Al Pastor"
+                },
+                {
+                  "name": "Chorizo"
+                },
+                {
+                  "name": "Carnitas"
+                }
+              ]
+            }
+          ],
+          "imageSrc": "",
+          "category": "especialidades",
+          "image": false
+        },
+        {
+          "id": "especialidades-14",
+          "name": "Quesadilla sin Carne",
+          "price": 9.99,
+          "imageSrc": "",
+          "category": "especialidades",
+          "image": false
+        },
+        {
+          "id": "especialidades-15",
+          "name": "Quesadilla (carne especial)",
+          "price": 15.99,
+          "optionGroups": [
+            {
+              "name": "Carne",
+              "required": true,
+              "values": [
+                {
+                  "name": "Cabeza"
+                },
+                {
+                  "name": "Tripa"
+                },
+                {
+                  "name": "Lengua"
+                }
+              ]
+            }
+          ],
+          "imageSrc": "",
+          "category": "especialidades",
+          "image": false
+        },
+        {
+          "id": "especialidades-16",
+          "name": "Ensalada Chipotle",
+          "price": 13.99,
+          "description": "Ensalada de pollo con salsa chipotle.",
+          "imageSrc": "",
+          "category": "especialidades",
+          "image": false
+        },
+        {
+          "id": "especialidades-17",
+          "name": "Costillas de Puerco",
+          "price": 15.5,
+          "description": "Servido con arroz y frijoles.",
+          "optionGroups": [
+            {
+              "name": "Nopal",
+              "required": true,
+              "values": [
+                {
+                  "name": "Con Nopal"
+                },
+                {
+                  "name": "Sin Nopal"
+                }
+              ]
+            }
+          ],
+          "imageSrc": "",
+          "category": "especialidades",
+          "image": false
+        },
+        {
+          "id": "especialidades-18",
+          "name": "Pupusas",
+          "price": 5.0,
+          "optionGroups": [
+            {
+              "name": "Relleno",
+              "required": true,
+              "values": [
+                {
+                  "name": "Queso con Frijol"
+                },
+                {
+                  "name": "Revueltas"
+                },
+                {
+                  "name": "Calabazitas"
+                },
+                {
+                  "name": "Chorizo"
+                },
+                {
+                  "name": "Loroco"
+                }
+              ]
+            }
+          ],
+          "imageSrc": "",
+          "category": "especialidades",
+          "image": false
+        },
+        {
+          "id": "especialidades-19",
+          "name": "Gorditas",
+          "price": 7.49,
+          "optionGroups": [
+            {
+              "name": "Carne",
+              "required": true,
+              "values": [
+                {
+                  "name": "Asada"
+                },
+                {
+                  "name": "Al Pastor"
+                },
+                {
+                  "name": "Chorizo"
+                },
+                {
+                  "name": "Carnitas"
+                }
+              ]
+            }
+          ],
+          "imageSrc": "",
+          "category": "especialidades",
+          "image": false
+        },
+        {
+          "id": "especialidades-20",
+          "name": "Gorditas (carne especial)",
+          "price": 8.99,
+          "optionGroups": [
+            {
+              "name": "Carne",
+              "required": true,
+              "values": [
+                {
+                  "name": "Lengua"
+                },
+                {
+                  "name": "Tripa"
+                },
+                {
+                  "name": "Cabeza"
+                }
+              ]
+            }
+          ],
+          "imageSrc": "",
+          "category": "especialidades",
+          "image": false
+        },
+        {
+          "id": "especialidades-21",
+          "name": "Sopes",
+          "price": 7.49,
+          "optionGroups": [
+            {
+              "name": "Carne",
+              "required": true,
+              "values": [
+                {
+                  "name": "Asada"
+                },
+                {
+                  "name": "Al Pastor"
+                },
+                {
+                  "name": "Chorizo"
+                },
+                {
+                  "name": "Carnitas"
+                },
+                {
+                  "name": "Pollo"
+                }
+              ]
+            }
+          ],
+          "imageSrc": "",
+          "category": "especialidades",
+          "image": false
+        },
+        {
+          "id": "especialidades-22",
+          "name": "Sopes (carne especial)",
+          "price": 8.99,
+          "optionGroups": [
+            {
+              "name": "Carne",
+              "required": true,
+              "values": [
+                {
+                  "name": "Lengua"
+                },
+                {
+                  "name": "Tripa"
+                },
+                {
+                  "name": "Cabeza"
+                }
+              ]
+            }
+          ],
+          "imageSrc": "",
+          "category": "especialidades",
+          "image": false
+        }
+      ]
+    },
+    {
+      "id": "caldos",
+      "name": "Caldos",
+      "items": [
+        {
+          "id": "caldos-01",
+          "name": "Caldo de Res",
+          "price": 15.99,
+          "description": "Servido caliente con verduras y acompañado con arroz.",
+          "imageSrc": "",
+          "category": "caldos",
+          "image": false
+        },
+        {
+          "id": "caldos-02",
+          "name": "Caldo de Pollo",
+          "price": 15.99,
+          "description": "Servido con verduras y acompañado con arroz.",
+          "imageSrc": "",
+          "category": "caldos",
+          "image": false
+        },
+        {
+          "id": "caldos-03",
+          "name": "Pozole",
+          "price": 14.99,
+          "imageSrc": "",
+          "category": "caldos",
+          "image": false
+        },
+        {
+          "id": "caldos-04",
+          "name": "Caldo de Camarón",
+          "price": 17.99,
+          "imageSrc": "",
+          "category": "caldos",
+          "image": false
+        },
+        {
+          "id": "caldos-05",
+          "name": "Menudo",
+          "price": 16.99,
+          "notes": "Solo sábados y domingos.",
+          "imageSrc": "",
+          "availability": {
+            "daysOfWeek": [
+              6,
+              0
+            ],
+            "label": "Solo sábados y domingos",
+            "timeZone": "America/Los_Angeles"
+          },
+          "category": "caldos",
+          "image": false
+        }
+      ]
+    },
+    {
+      "id": "mariscos",
+      "name": "Mariscos",
+      "items": [
+        {
+          "id": "mariscos-01",
+          "name": "Plato de Camarones",
+          "price": 18.5,
+          "description": "Servido con arroz y frijoles.",
+          "optionGroups": [
+            {
+              "name": "Preparación",
+              "required": true,
+              "values": [
+                {
+                  "name": "Al Mojo de Ajo"
+                },
+                {
+                  "name": "Rancheros"
+                },
+                {
+                  "name": "A la Diabla"
+                }
+              ]
+            }
+          ],
+          "imageSrc": "",
+          "category": "mariscos",
+          "image": false
+        },
+        {
+          "id": "mariscos-02",
+          "name": "Mojarra Frita",
+          "price": 15.99,
+          "description": "Servido con arroz y frijoles.",
+          "imageSrc": "",
+          "category": "mariscos",
+          "image": false
+        },
+        {
+          "id": "mariscos-03",
+          "name": "Taco de Camarón",
+          "price": 4.99,
+          "description": "Servido con repollo, pico de gallo y crema.",
+          "optionGroups": [
+            {
+              "name": "Preparación",
+              "required": true,
+              "values": [
+                {
+                  "name": "Empanizados"
+                },
+                {
+                  "name": "A la Plancha"
+                }
+              ]
+            }
+          ],
+          "imageSrc": "",
+          "category": "mariscos",
+          "image": false
+        },
+        {
+          "id": "mariscos-04",
+          "name": "Taco de Pescado",
+          "price": 4.49,
+          "description": "Servido con repollo, pico de gallo, crema, salsa y tomate.",
+          "imageSrc": "",
+          "category": "mariscos",
+          "image": false
+        },
+        {
+          "id": "mariscos-05",
+          "name": "Tostada de Camarón",
+          "price": 8.99,
+          "imageSrc": "",
+          "category": "mariscos",
+          "image": false
+        },
+        {
+          "id": "mariscos-06",
+          "name": "Cóctel de Camarón",
+          "price": 18.5,
+          "imageSrc": "",
+          "category": "mariscos",
+          "image": false
+        }
+      ]
+    },
+    {
+      "id": "aperitivos",
+      "name": "Aperitivos",
+      "items": [
+        {
+          "id": "aperitivos-01",
+          "name": "Carne Asada Fries",
+          "price": 13.99,
+          "imageSrc": "",
+          "category": "aperitivos",
+          "image": false
+        },
+        {
+          "id": "aperitivos-02",
+          "name": "Alitas de Búfalo",
+          "price": 13.99,
+          "imageSrc": "",
+          "category": "aperitivos",
+          "image": false
+        },
+        {
+          "id": "aperitivos-03",
+          "name": "Carne Asada Nachos",
+          "price": 12.99,
+          "imageSrc": "",
+          "category": "aperitivos",
+          "image": false
+        },
+        {
+          "id": "aperitivos-04",
+          "name": "Chips con Guacamole",
+          "price": 8.99,
+          "imageSrc": "",
+          "category": "aperitivos",
+          "image": false
+        },
+        {
+          "id": "aperitivos-05",
+          "name": "Chips con Frijoles y Queso",
+          "price": 5.0,
+          "imageSrc": "",
+          "category": "aperitivos",
+          "image": false
+        },
+        {
+          "id": "aperitivos-06",
+          "name": "6 Chiles Güeritos con Camarón",
+          "price": 18.99,
+          "imageSrc": "",
+          "category": "aperitivos",
+          "image": false
+        },
+        {
+          "id": "aperitivos-07",
+          "name": "3 Empanadas",
+          "price": 13.99,
+          "optionGroups": [
+            {
+              "name": "Relleno",
+              "required": true,
+              "values": [
+                {
+                  "name": "Queso"
+                },
+                {
+                  "name": "Asada"
+                },
+                {
+                  "name": "Pollo"
+                }
+              ]
+            }
+          ],
+          "imageSrc": "",
+          "category": "aperitivos",
+          "image": false
+        }
+      ]
+    },
+    {
+      "id": "postres",
+      "name": "Postres",
+      "items": [
+        {
+          "id": "postres-01",
+          "name": "Chocoflan",
+          "price": 3.99,
+          "imageSrc": "",
+          "category": "postres",
+          "image": false
+        },
+        {
+          "id": "postres-02",
+          "name": "Plátano Macho",
+          "price": 3.99,
+          "imageSrc": "",
+          "category": "postres",
+          "image": false
+        },
+        {
+          "id": "postres-03",
+          "name": "Nutella",
+          "price": 3.99,
+          "imageSrc": "",
+          "category": "postres",
+          "image": false
+        },
+        {
+          "id": "postres-04",
+          "name": "Gelatina con Rompope",
+          "price": 3.99,
+          "imageSrc": "",
+          "category": "postres",
+          "image": false
+        }
+      ]
+    },
+    {
+      "id": "bebidas",
+      "name": "Bebidas",
+      "items": [
+        {
+          "id": "bebidas-01",
+          "name": "Soda de Botella",
+          "price": 4.0,
+          "optionGroups": [
+            {
+              "name": "Sabor",
+              "required": true,
+              "values": [
+                {
+                  "name": "Coca-Cola"
+                },
+                {
+                  "name": "Fanta"
+                },
+                {
+                  "name": "Fresca"
+                }
+              ]
+            }
+          ],
+          "imageSrc": "",
+          "category": "bebidas",
+          "image": false
+        },
+        {
+          "id": "bebidas-02",
+          "name": "Jarritos",
+          "price": 3.5,
+          "imageSrc": "",
+          "category": "bebidas",
+          "image": false
+        },
+        {
+          "id": "bebidas-03",
+          "name": "Café",
+          "price": 3.5,
+          "notes": "Refill: $1.50",
+          "imageSrc": "",
+          "category": "bebidas",
+          "image": false
+        },
+        {
+          "id": "bebidas-04",
+          "name": "Refresco Preparado (Ruso)",
+          "price": 5.0,
+          "description": "Sin alcohol.",
+          "imageSrc": "",
+          "category": "bebidas",
+          "image": false
+        },
+        {
+          "id": "bebidas-05",
+          "name": "Aguas Frescas",
+          "price": 4.5,
+          "description": "100% naturales.",
+          "optionGroups": [
+            {
+              "name": "Tamaño",
+              "required": true,
+              "values": [
+                {
+                  "name": "Chica"
+                },
+                {
+                  "name": "Grande",
+                  "priceDelta": 2.0
+                }
+              ]
+            }
+          ],
+          "notes": "Precio base chica $4.50; grande $6.50; refill $3.00.",
+          "imageSrc": "",
+          "category": "bebidas",
+          "image": false
+        }
+      ]
+    }
+  ],
+  "scheduleNotes": [
+    "Menudo is available on Saturdays and Sundays only.",
+    "Restaurant opening hours and other item availability schedules are not specified by these photos."
+  ]
+}

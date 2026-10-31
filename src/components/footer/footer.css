@@ -1,0 +1,223 @@
+
+/* ==========================================
+   FOOTER — SABOR DE MI TIERRA
+========================================== */
+
+.footer {
+  position: relative;
+  width: 100%;
+
+  padding: 65px 20px 25px;
+
+  background: #06213c;
+  color: #ffffff;
+
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ==========================================
+   LOGO
+========================================== */
+
+.footer-logo {
+  display: inline-block;
+  margin-bottom: 18px;
+}
+
+.footer-logo img {
+  display: block;
+  width: 115px;
+  height: auto;
+
+  transition: transform 0.25s ease;
+}
+
+.footer-logo:hover img {
+  transform: scale(1.04);
+}
+
+/* ==========================================
+   RESTAURANT DESCRIPTION
+========================================== */
+
+.footer-title {
+  margin: 0 0 8px;
+
+  font-family: "fields", Georgia, serif;
+  font-size: clamp(1.4rem, 2.2vw, 2rem);
+  font-weight: 700;
+
+  color: #fff5df;
+}
+
+.footer-description {
+  margin: 0;
+
+  color: #e7d6b5;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ==========================================
+   DECORATIVE DIVIDER
+========================================== */
+
+.footer-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+  margin: 28px 0;
+}
+
+.footer-divider > span:first-child,
+.footer-divider > span:last-child {
+  width: 60px;
+  height: 1px;
+
+  background: #dda33d;
+}
+
+.footer-diamond {
+  display: block;
+
+  width: 9px;
+  height: 9px;
+
+  background: #dda33d;
+  transform: rotate(45deg);
+}
+
+/* ==========================================
+   SOCIAL MEDIA ICONS
+========================================== */
+
+.footer-socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 18px;
+  margin-bottom: 38px;
+}
+
+.footer-social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 50px;
+  height: 50px;
+
+  background: rgba(255, 255, 255, 0.07);
+
+  border: 1px solid rgba(221, 163, 61, 0.45);
+  border-radius: 50%;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.footer-social-link:hover {
+  background: rgba(221, 163, 61, 0.16);
+  border-color: #dda33d;
+  transform: translateY(-3px);
+}
+
+.footer-social-link img {
+  width: 23px;
+  height: 23px;
+  object-fit: contain;
+}
+
+/* Instagram SVG may have dark strokes.
+   Brighten it for the navy footer. */
+
+.footer-social-link:first-child img {
+  filter: brightness(0) invert(1);
+}
+
+/* ==========================================
+   COPYRIGHT
+========================================== */
+
+.footer-bottom {
+  width: 100%;
+  padding-top: 22px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.footer-bottom small {
+  display: block;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 650px) {
+  .footer {
+    padding: 50px 20px 22px;
+  }
+
+  .footer-logo img {
+    width: 100px;
+  }
+
+  .footer-title {
+    font-size: 1.5rem;
+  }
+
+  .footer-description {
+    font-size: 13px;
+  }
+
+  .footer-socials {
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+
+  .footer-social-link {
+    width: 46px;
+    height: 46px;
+  }
+
+  .footer-bottom small {
+    font-size: 11px;
+  }
+}
+
+/* ==========================================
+   ACCESSIBILITY
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .footer-logo img,
+  .footer-social-link {
+    transition: none;
+  }
+
+  .footer-logo:hover img,
+  .footer-social-link:hover {
+    transform: none;
+  }
+}

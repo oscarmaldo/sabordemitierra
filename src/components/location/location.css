@@ -1,0 +1,562 @@
+
+/* ==========================================
+   CONTACT & LOCATION — DESIGN
+========================================== */
+
+.location-section {
+  --location-navy: #082f55;
+  --location-gold: #dda33d;
+  --location-cream: #fff7e8;
+  --location-terracotta: #a84426;
+  --location-brown: #71533d;
+
+  position: relative;
+  width: 100%;
+
+  padding: 95px 6% 110px;
+
+  background:
+    radial-gradient(
+      ellipse at 50% 0%,
+      rgba(255, 215, 146, 0.22),
+      transparent 65%
+    ),
+    #fff7e8;
+
+  scroll-margin-top: 30px;
+}
+
+.location-container {
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+/* ==========================================
+   SECTION HEADING
+========================================== */
+
+.location-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: clamp(12px, 3vw, 35px);
+  margin-bottom: 48px;
+
+  text-align: center;
+}
+
+.location-heading-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.location-heading-decor {
+  width: clamp(40px, 7vw, 85px);
+  height: auto;
+  object-fit: contain;
+}
+
+.location-eyebrow {
+  color: var(--location-terracotta);
+
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.location-heading h2 {
+  margin: 10px 0;
+
+  color: var(--location-navy);
+  font-family: "fields", Georgia, serif;
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  font-weight: 800;
+}
+
+.location-heading p {
+  max-width: 560px;
+  margin: 0;
+
+  color: var(--location-brown);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* ==========================================
+   TWO-COLUMN LAYOUT
+========================================== */
+
+.location-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+
+  gap: 28px;
+  align-items: stretch;
+}
+
+/* ==========================================
+   INFORMATION CARD
+========================================== */
+
+.location-info-card {
+  display: flex;
+  flex-direction: column;
+
+  padding: clamp(25px, 3vw, 40px);
+
+  background: #fffcf5;
+
+  border: 1px solid #e4c992;
+  border-radius: 18px;
+
+  box-shadow:
+    0 8px 28px rgba(8, 47, 85, 0.07);
+}
+
+.location-info-header {
+  padding-bottom: 22px;
+  border-bottom: 1px solid #eadcc3;
+}
+
+.location-info-eyebrow {
+  color: var(--location-terracotta);
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.location-info-header h3 {
+  margin: 10px 0;
+
+  color: var(--location-navy);
+  font-family: "fields", Georgia, serif;
+  font-size: clamp(1.8rem, 2.5vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.location-info-header p {
+  max-width: 390px;
+  margin: 0;
+
+  color: var(--location-brown);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* ==========================================
+   CONTACT DETAILS
+========================================== */
+
+.location-details {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+
+  padding: 30px 0;
+}
+
+.location-detail {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 16px;
+}
+
+.location-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  width: 48px;
+  height: 48px;
+
+  color: var(--location-navy);
+  background: #f9e7c5;
+
+  border: 1px solid #e9d2a6;
+  border-radius: 12px;
+}
+
+.location-icon svg {
+  width: 23px;
+  height: 23px;
+}
+
+.location-detail-text {
+  min-width: 0;
+}
+
+.location-detail-text h4 {
+  margin: 0 0 7px;
+
+  color: var(--location-navy);
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.location-detail-text p,
+.location-detail-text a {
+  margin: 0;
+
+  color: var(--location-brown);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.location-detail-text a {
+  color: var(--location-terracotta);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.location-detail-text a:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================
+   ACTION BUTTONS
+========================================== */
+
+.location-actions {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 12px;
+  margin-top: auto;
+}
+
+.location-directions-button,
+.location-call-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  min-height: 48px;
+  padding: 13px 24px;
+
+  border-radius: 10px;
+
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.location-directions-button {
+  color: #ffffff;
+  background: var(--location-navy);
+
+  box-shadow:
+    0 5px 15px rgba(8, 47, 85, 0.14);
+}
+
+.location-directions-button:hover {
+  background: #12466f;
+  transform: translateY(-2px);
+}
+
+.location-call-button {
+  color: var(--location-navy);
+  background: #f6dfb0;
+
+  border: 1px solid #d6ac61;
+}
+
+.location-call-button:hover {
+  background: #f1d395;
+  transform: translateY(-2px);
+}
+
+/* ==========================================
+   MAP CARD
+========================================== */
+
+.location-map-card {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #e4c992;
+  border-radius: 18px;
+
+  box-shadow:
+    0 8px 28px rgba(8, 47, 85, 0.07);
+}
+
+.location-map-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+  padding: 22px 25px;
+
+  background: var(--location-navy);
+}
+
+.location-map-header span {
+  color: #e7bb70;
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.location-map-header h3 {
+  margin: 7px 0 0;
+
+  color: #ffffff;
+  font-family: "fields", Georgia, serif;
+  font-size: clamp(1.25rem, 1.8vw, 1.65rem);
+}
+
+.location-map-marker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+
+  font-size: 20px;
+}
+
+/* Embedded map */
+
+.location-map-frame {
+  position: relative;
+
+  flex: 1;
+  min-height: 400px;
+
+  background: #ece8dc;
+}
+
+.location-map-frame iframe {
+  position: absolute;
+  inset: 0;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.location-map-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100%;
+  min-height: 400px;
+  padding: 25px;
+
+  background: #f0e8d8;
+  color: var(--location-navy);
+
+  text-align: center;
+}
+
+/* Bottom footer */
+
+.location-map-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 15px;
+  padding: 19px 22px;
+
+  background: #fffcf5;
+  border-top: 1px solid #eadcc3;
+}
+
+.location-map-footer span {
+  color: var(--location-brown);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.location-map-footer a {
+  color: var(--location-terracotta);
+
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.location-map-footer a:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 1000px) {
+  .location-section {
+    padding: 75px 5% 90px;
+  }
+
+  .location-grid {
+    gap: 18px;
+  }
+
+  .location-info-card {
+    padding: 25px;
+  }
+
+  .location-map-frame {
+    min-height: 360px;
+  }
+
+  .location-map-footer {
+    flex-wrap: wrap;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+  .location-section {
+    padding: 65px 5% 75px;
+  }
+
+  .location-heading {
+    gap: 10px;
+    margin-bottom: 32px;
+  }
+
+  .location-heading-decor {
+    width: 42px;
+  }
+
+  .location-heading h2 {
+    font-size: clamp(2rem, 7vw, 2.8rem);
+  }
+
+  .location-heading p {
+    font-size: 13px;
+  }
+
+  .location-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .location-info-card {
+    padding: 25px 22px;
+  }
+
+  .location-details {
+    gap: 22px;
+  }
+
+  .location-map-frame {
+    min-height: 340px;
+  }
+
+  .location-map-footer {
+    padding: 16px 18px;
+  }
+}
+
+@media (max-width: 430px) {
+  .location-heading-decor {
+    width: 30px;
+  }
+
+  .location-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .location-info-header h3 {
+    font-size: 1.75rem;
+  }
+
+  .location-actions a {
+    width: 100%;
+  }
+
+  .location-map-header {
+    padding: 20px;
+  }
+
+  .location-map-frame {
+    min-height: 300px;
+  }
+
+  .location-map-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* ==========================================
+   ACCESSIBILITY
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .location-directions-button,
+  .location-call-button {
+    transition: none;
+  }
+
+  .location-directions-button:hover,
+  .location-call-button:hover {
+    transform: none;
+  }
+}
+
+
+/* ==========================================
+   LOCATION — TALAVERA TOP DIVIDER
+   Matches the Menu section
+========================================== */
+
+.location-section {
+  position: relative;
+}
+
+.location-section::before {
+  content: "";
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 12px;
+
+  background-image: url("../../assets/mosaic.png");
+  background-repeat: repeat-x;
+  background-size: 110px 110px;
+  background-position: center;
+
+  border-bottom: 2px solid #dda33d;
+
+  pointer-events: none;
+  z-index: 2;
+}

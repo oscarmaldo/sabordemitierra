@@ -1,0 +1,373 @@
+
+/* ==========================================
+   ABOUT COMPANY — DESIGN VARIABLES
+========================================== */
+
+.about-company {
+  --about-navy: #082f55;
+  --about-gold: #dda33d;
+  --about-cream: #fff5df;
+  --about-terracotta: #a84426;
+  --about-brown: #6d4b32;
+
+  position: relative;
+  isolation: isolate;
+
+  width: 100%;
+  padding: 100px 6% 110px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      ellipse at 50% 0%,
+      rgba(255, 211, 126, 0.24),
+      transparent 60%
+    ),
+    linear-gradient(
+      180deg,
+      #fff5df 0%,
+      #fffaf0 100%
+    );
+
+  scroll-margin-top: 80px;
+}
+
+/* ==========================================
+   SECTION CONTAINER
+========================================== */
+
+.about-company-container {
+  position: relative;
+  z-index: 1;
+
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ==========================================
+   SECTION HEADING
+========================================== */
+
+.about-company-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-bottom: 30px;
+
+  text-align: center;
+}
+
+.about-company-eyebrow {
+  color: var(--about-terracotta);
+
+  font-family: var(--font-body, Arial, sans-serif);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+.about-company-heading h2 {
+  max-width: 800px;
+  margin: 14px 0 25px;
+
+  font-family: "fields", Georgia, serif;
+  font-size: clamp(2.4rem, 4vw, 4.1rem);
+  font-weight: 800;
+  line-height: 1.13;
+
+  color: var(--about-navy);
+}
+
+.about-company-heading h2 span {
+  color: var(--about-terracotta);
+}
+
+/* ==========================================
+   DECORATIVE DIVIDER
+========================================== */
+
+.about-company-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.about-company-divider > span:first-child,
+.about-company-divider > span:last-child {
+  display: block;
+
+  width: 65px;
+  height: 2px;
+
+  background: var(--about-gold);
+}
+
+.about-company-diamond {
+  display: block;
+
+  width: 11px;
+  height: 11px;
+
+  background: var(--about-terracotta);
+
+  transform: rotate(45deg);
+}
+
+/* ==========================================
+   ABOUT DESCRIPTION
+========================================== */
+
+.about-company-description {
+  max-width: 860px;
+  margin: 0 auto 45px;
+
+  text-align: center;
+}
+
+.about-company-description p {
+  margin: 0 0 18px;
+
+  color: var(--about-brown);
+
+  font-family: var(--font-body, Arial, sans-serif);
+  font-size: clamp(15px, 1.2vw, 17px);
+  font-weight: 400;
+  line-height: 1.9;
+}
+
+.about-company-description strong {
+  color: var(--about-navy);
+  font-weight: 800;
+}
+
+/* ==========================================
+   RESTAURANT PHOTO GALLERY
+========================================== */
+
+.about-company-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 28px;
+  align-items: stretch;
+}
+
+/* ==========================================
+   PHOTO CARD
+========================================== */
+
+.about-company-photo {
+  position: relative;
+
+  min-width: 0;
+  margin: 0;
+  padding: 7px;
+
+  overflow: hidden;
+
+  background: #fffaf0;
+
+  border: 2px solid var(--about-gold);
+  border-radius: 17px;
+
+  box-shadow:
+    0 12px 30px rgba(8, 47, 85, 0.1);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.about-company-photo:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 18px 35px rgba(8, 47, 85, 0.15);
+}
+
+.about-company-photo img {
+  display: block;
+
+  width: 100%;
+  height: 390px;
+
+  object-fit: cover;
+  object-position: center 55%;
+
+  border-radius: 10px;
+
+  transition: transform 0.45s ease;
+}
+
+.about-company-photo:hover img {
+  transform: scale(1.025);
+}
+
+/* ==========================================
+   PHOTO CAPTIONS
+========================================== */
+
+.about-company-photo figcaption {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 17px 14px 11px;
+
+  color: var(--about-navy);
+
+  font-family: var(--font-body, Arial, sans-serif);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.about-company-photo figcaption span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 30px;
+  height: 30px;
+
+  flex-shrink: 0;
+
+  color: var(--about-terracotta);
+  background: #f8e6c4;
+
+  border: 1px solid #e7c88f;
+  border-radius: 50%;
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+/* ==========================================
+   CLOSING MESSAGE
+========================================== */
+
+.about-company-closing {
+  margin: 45px 0 0;
+
+  color: var(--about-brown);
+
+  font-family: "fields", Georgia, serif;
+  font-size: clamp(1.25rem, 2vw, 1.7rem);
+  font-style: italic;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.about-company-closing strong {
+  color: var(--about-terracotta);
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 1000px) {
+  .about-company {
+    padding: 80px 5% 90px;
+  }
+
+  .about-company-gallery {
+    gap: 18px;
+  }
+
+  .about-company-photo img {
+    height: 320px;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 650px) {
+  .about-company {
+    padding: 65px 5% 75px;
+  }
+
+  .about-company-heading {
+    margin-bottom: 25px;
+  }
+
+  .about-company-eyebrow {
+    font-size: 10px;
+    letter-spacing: 1.8px;
+  }
+
+  .about-company-heading h2 {
+    margin: 12px 0 23px;
+
+    font-size: clamp(2rem, 7vw, 2.7rem);
+  }
+
+  .about-company-description {
+    margin-bottom: 32px;
+  }
+
+  .about-company-description p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .about-company-gallery {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .about-company-photo img {
+    height: 270px;
+  }
+
+  .about-company-photo figcaption {
+    padding: 14px 10px 8px;
+    font-size: 14px;
+  }
+
+  .about-company-closing {
+    margin-top: 35px;
+    font-size: 1.3rem;
+  }
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 380px) {
+  .about-company {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+
+  .about-company-photo img {
+    height: 235px;
+  }
+
+  .about-company-divider > span:first-child,
+  .about-company-divider > span:last-child {
+    width: 45px;
+  }
+}
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .about-company-photo,
+  .about-company-photo img {
+    transition: none;
+  }
+
+  .about-company-photo:hover,
+  .about-company-photo:hover img {
+    transform: none;
+  }
+}

@@ -1,0 +1,629 @@
+
+/* ==========================================
+   SABOR DE MI TIERRA — HERO
+   Professional responsive layout
+========================================== */
+
+.hero {
+  --hero-navy: #082f55;
+  --hero-brown: #88350d;
+  --hero-gold: #f5b52f;
+  --hero-font: "fields", Georgia, serif;
+
+  --hero-photo-width: 46%;
+  --hero-mosaic-height: 110px;
+  --hero-tile-size: 150px;
+
+  position: relative;
+  isolation: isolate;
+
+  display: flex;
+  align-items: center;
+
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 650px;
+
+  padding: 125px 6% 135px;
+
+  overflow: hidden;
+
+  background: linear-gradient(
+    115deg,
+    #ffd36a 0%,
+    #ffc64b 28%,
+    #f5b52f 65%,
+    #ecaa26 100%
+  );
+}
+
+/* ==========================================
+   LIGHT WOVEN TEXTURE
+========================================== */
+
+.hero-texture {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  pointer-events: none;
+
+  background-image:
+    repeating-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.065) 0,
+      rgba(255, 255, 255, 0.065) 1px,
+      transparent 1px,
+      transparent 32px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      rgba(120, 73, 20, 0.035) 0,
+      rgba(120, 73, 20, 0.035) 1px,
+      transparent 1px,
+      transparent 32px
+    );
+
+  opacity: 0.28;
+}
+
+/* ==========================================
+   HERO CONTENT
+========================================== */
+
+.hero-content {
+  position: relative;
+  z-index: 5;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  /*
+    Keep the text completely within
+    the left side of the Hero.
+  */
+  box-sizing: border-box;
+  flex: 0 0 46%;
+  width: 46%;
+  max-width: 610px;
+  min-width: 0;
+
+  padding-right: clamp(12px, 2vw, 32px);
+}
+
+/* ==========================================
+   RESTAURANT LOGO
+========================================== */
+
+.hero-logo {
+  display: block;
+
+  width: clamp(175px, 17vw, 245px);
+  max-width: 75%;
+  height: auto;
+
+  margin: 0 0 26px;
+}
+
+/* ==========================================
+   HERO HEADLINE
+========================================== */
+
+.hero-title {
+  width: 100%;
+  max-width: 100%;
+
+  margin: 0;
+
+  color: var(--hero-navy);
+
+  font-family: var(--hero-font);
+  font-size: clamp(2.2rem, 3.1vw, 3.8rem);
+  font-weight: 900;
+  line-height: 1.13;
+  letter-spacing: -0.7px;
+
+  /*
+    Allow the long location name
+    to wrap without leaving the container.
+  */
+  white-space: normal;
+  overflow-wrap: break-word;
+  text-wrap: balance;
+}
+
+.hero-title span {
+  display: block;
+
+  margin-top: 7px;
+
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+/* ==========================================
+   HERO SUBTITLE
+========================================== */
+
+.hero-subtitle {
+  max-width: 440px;
+
+  margin: 22px 0 30px;
+
+  color: var(--hero-brown);
+
+  font-family: var(--font-body, Arial, sans-serif);
+  font-size: clamp(1rem, 1.2vw, 1.15rem);
+  font-weight: 500;
+  line-height: 1.65;
+}
+
+/* ==========================================
+   VIEW MENU BUTTON
+========================================== */
+
+.hero .hero-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  width: 100%;
+}
+
+.hero .hero-actions .hero-menu {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  min-width: 180px;
+  min-height: 52px;
+  padding: 13px 32px;
+
+  color: #ffffff;
+  background: var(--hero-navy);
+
+  border: 1px solid var(--hero-navy);
+  border-radius: 30px;
+
+  font-family: var(--font-body, Arial, sans-serif);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  text-decoration: none;
+
+  box-shadow:
+    0 5px 15px rgba(8, 47, 85, 0.14);
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.hero .hero-actions .hero-menu:hover {
+  background: #10446e;
+
+  box-shadow:
+    0 8px 20px rgba(8, 47, 85, 0.2);
+
+  transform: translateY(-2px);
+}
+
+.hero .hero-actions .hero-menu:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 4px;
+}
+
+/* ==========================================
+   TACO PHOTOGRAPH
+========================================== */
+
+.hero-image-container {
+  position: absolute;
+  z-index: 1;
+
+  top: var(--nav-height, 90px);
+  right: 0;
+  bottom: 0;
+
+  width: var(--hero-photo-width);
+
+  overflow: hidden;
+  background: transparent;
+
+  /*
+    Deep organic curve:
+    lets the yellow sweep into the photo.
+  */
+  border-radius:
+    155px 0 0 315px /
+    140px 0 0 390px;
+}
+
+.hero-food-image {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: 50% center;
+
+  transition: transform 0.6s ease;
+}
+
+@media (hover: hover) {
+  .hero-image-container:hover .hero-food-image {
+    transform: scale(1.025);
+  }
+}
+
+/* ==========================================
+   TALAVERA MOSAIC WAVE
+========================================== */
+
+.hero-mosaic {
+  position: absolute;
+  z-index: 7;
+
+  left: 0;
+  bottom: -1px;
+
+  width: 100%;
+  height: var(--hero-mosaic-height);
+
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* ==========================================
+   FIXED-SIZE MOSAIC TILES
+========================================== */
+
+.hero-mosaic-tiles {
+  position: absolute;
+  inset: 0;
+
+  background-image: url("../../assets/mosaic.png");
+  background-repeat: repeat;
+
+  background-size:
+    var(--hero-tile-size)
+    var(--hero-tile-size);
+
+  background-position: left bottom;
+
+  /*
+    The mask scales with the Hero,
+    but the actual mosaic image does not.
+  */
+
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 110' preserveAspectRatio='none'%3E%3Cpath fill='black' d='M0 104 C210 108 340 110 465 88 C610 54 670 5 805 18 C940 30 1040 70 1200 34 L1200 110 L0 110 Z'/%3E%3C/svg%3E");
+
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 110' preserveAspectRatio='none'%3E%3Cpath fill='black' d='M0 104 C210 108 340 110 465 88 C610 54 670 5 805 18 C940 30 1040 70 1200 34 L1200 110 L0 110 Z'/%3E%3C/svg%3E");
+
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+
+/* ==========================================
+   MOSAIC NAVY OUTLINE
+========================================== */
+
+.hero-mosaic-outline {
+  position: absolute;
+  inset: 0;
+
+  display: block;
+
+  width: 100%;
+  height: 100%;
+}
+
+/* ==========================================
+   LARGE DESKTOP — 1500px+
+========================================== */
+
+@media (min-width: 1500px) {
+  .hero {
+    --hero-photo-width: 47%;
+    --hero-mosaic-height: 120px;
+
+    min-height: 700px;
+    padding: 135px 7% 145px;
+  }
+
+  .hero-content {
+    flex-basis: 45%;
+    width: 45%;
+    max-width: 680px;
+  }
+
+  .hero-title {
+    font-size: clamp(3.2rem, 3.1vw, 4.4rem);
+  }
+
+  .hero-logo {
+    width: 250px;
+  }
+
+  .hero-image-container {
+    border-radius:
+      180px 0 0 360px /
+      160px 0 0 410px;
+  }
+}
+
+/* ==========================================
+   SMALL DESKTOP — 1101px–1499px
+========================================== */
+
+@media (min-width: 1101px) and (max-width: 1499px) {
+  .hero {
+    min-height: 630px;
+  }
+
+  .hero-content {
+    flex-basis: 45%;
+    width: 45%;
+  }
+
+  .hero-title {
+    font-size: clamp(2.25rem, 3.15vw, 3.5rem);
+  }
+}
+
+/* ==========================================
+   TABLET — 769px–1100px
+========================================== */
+
+@media (min-width: 769px) and (max-width: 1100px) {
+  .hero {
+    --hero-photo-width: 45%;
+    --hero-mosaic-height: 85px;
+    --hero-tile-size: 130px;
+
+    min-height: 555px;
+    padding: 110px 4% 105px;
+  }
+
+  .hero-content {
+    flex-basis: 49%;
+    width: 49%;
+    max-width: none;
+    padding-right: 15px;
+  }
+
+  .hero-logo {
+    width: 185px;
+    max-width: 75%;
+    margin-bottom: 18px;
+  }
+
+  .hero-title {
+    font-size: clamp(1.95rem, 3.25vw, 2.75rem);
+    line-height: 1.15;
+    letter-spacing: -0.4px;
+  }
+
+  .hero-title span {
+    margin-top: 5px;
+  }
+
+  .hero-subtitle {
+    max-width: 350px;
+    margin: 18px 0 24px;
+
+    font-size: 0.95rem;
+  }
+
+  .hero .hero-actions .hero-menu {
+    min-width: 160px;
+    min-height: 46px;
+    padding: 11px 25px;
+    font-size: 14px;
+  }
+
+  .hero-image-container {
+    border-radius:
+      110px 0 0 230px /
+      100px 0 0 280px;
+  }
+}
+
+/* ==========================================
+   MOBILE — 768px AND BELOW
+========================================== */
+
+@media (max-width: 768px) {
+  .hero {
+    --hero-mosaic-height: 55px;
+    --hero-tile-size: 110px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    min-height: 0;
+    padding: 138px 0 0;
+  }
+
+  /* Mobile hero text */
+
+  .hero-content {
+    flex: none;
+
+    align-items: center;
+
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+
+    padding: 0 22px 40px;
+
+    text-align: center;
+  }
+
+  /*
+    The logo is already in the
+    mobile navigation.
+  */
+  .hero-logo {
+    display: none;
+  }
+
+  .hero-title {
+    width: 100%;
+    max-width: 570px;
+
+    font-size: clamp(2.05rem, 6.7vw, 3.2rem);
+    line-height: 1.13;
+    letter-spacing: -0.5px;
+
+    text-align: center;
+    text-wrap: balance;
+  }
+
+  .hero-title span {
+    display: block;
+    margin-top: 7px;
+    white-space: normal;
+  }
+
+  .hero-subtitle {
+    max-width: 400px;
+
+    margin: 17px 0 26px;
+
+    font-size: 0.97rem;
+    line-height: 1.55;
+
+    text-align: center;
+  }
+
+  .hero .hero-actions {
+    justify-content: center;
+  }
+
+  .hero .hero-actions .hero-menu {
+    min-width: 160px;
+    min-height: 48px;
+
+    padding: 12px 27px;
+
+    font-size: 14px;
+  }
+
+  /* Mobile photo moves below the text */
+
+  .hero-image-container {
+    position: relative;
+
+    top: auto;
+    right: auto;
+    bottom: auto;
+
+    width: 100%;
+    height: clamp(245px, 43vw, 350px);
+
+    flex-shrink: 0;
+
+    border-radius: 70px 70px 0 0;
+  }
+
+  .hero-food-image {
+    object-position: center 55%;
+  }
+}
+
+/* ==========================================
+   SMALL MOBILE — 430px AND BELOW
+========================================== */
+
+@media (max-width: 430px) {
+  .hero {
+    --hero-mosaic-height: 48px;
+    --hero-tile-size: 100px;
+
+    padding-top: 130px;
+  }
+
+  .hero-content {
+    padding: 0 19px 34px;
+  }
+
+  .hero-title {
+    font-size: clamp(1.85rem, 7.4vw, 2.35rem);
+    line-height: 1.16;
+  }
+
+  .hero-subtitle {
+    margin: 16px 0 23px;
+    font-size: 0.9rem;
+  }
+
+  .hero-image-container {
+    height: 245px;
+    border-radius: 55px 55px 0 0;
+  }
+}
+
+/* ==========================================
+   VERY NARROW PHONES — 360px AND BELOW
+========================================== */
+
+@media (max-width: 360px) {
+  .hero {
+    --hero-mosaic-height: 42px;
+    --hero-tile-size: 90px;
+
+    padding-top: 120px;
+  }
+
+  .hero-content {
+    padding: 0 15px 30px;
+  }
+
+  .hero-title {
+    font-size: clamp(1.7rem, 7.8vw, 1.95rem);
+  }
+
+  .hero-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .hero .hero-actions .hero-menu {
+    min-width: 150px;
+    min-height: 45px;
+  }
+
+  .hero-image-container {
+    height: 220px;
+    border-radius: 45px 45px 0 0;
+  }
+}
+
+/* ==========================================
+   REDUCED MOTION
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .hero .hero-actions .hero-menu,
+  .hero-food-image {
+    transition: none;
+  }
+
+  .hero .hero-actions .hero-menu:hover,
+  .hero-image-container:hover .hero-food-image {
+    transform: none;
+  }
+}
