@@ -18,24 +18,24 @@ export default function Hero() {
       {/* Main introduction */}
       <div className="hero-content">
 
-        <h1 className="hero-title">
-          <span className="hero-title-line">
-            The Best Mexican
-          </span>
+        
+<h1 className="hero-title">
+  <span className="hero-title-line">
+    Donde los sabores
+  </span>
 
-          <span className="hero-title-line">
-            Food in the
-          </span>
+  <span className="hero-title-line hero-title-accent">
+    son auténticos
+  </span>
+</h1>
 
-          <span className="hero-title-line hero-title-accent">
-            Coachella Valley
-          </span>
-        </h1>
 
-        <p className="hero-subtitle">
-          Auténtica comida mexicana,
-          <span> hecha con amor y tradición.</span>
-        </p>
+       
+<p className="hero-subtitle">
+  Comida mexicana,
+  <span> hecha con amor y tradición.</span>
+</p>
+
 
         <div className="hero-actions">
           <a href="#menu" className="hero-menu">
