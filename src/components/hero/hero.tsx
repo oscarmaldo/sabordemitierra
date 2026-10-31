@@ -1,30 +1,40 @@
 
 import "./hero.css";
 
-import logo from "../../assets/logo.png";
 import heroImg from "../../assets/heroImg.png";
+import texture from "../../assets/hero-grain-texture.webp";
 
 export default function Hero() {
   return (
     <section id="home" className="hero">
-      {/* Subtle woven background texture */}
-      <div className="hero-texture" aria-hidden="true" />
 
-      {/* Restaurant introduction */}
+      {/* Distressed paper texture over yellow background */}
+      <div
+        className="hero-texture"
+        aria-hidden="true"
+        style={{ backgroundImage: `url(${texture})` }}
+      />
+
+      {/* Main introduction */}
       <div className="hero-content">
-        <img
-          src={logo}
-          alt="Sabor de Mi Tierra"
-          className="hero-logo"
-        />
 
         <h1 className="hero-title">
-          The Best Mexican Food
-          <span>in the Coachella Valley</span>
+          <span className="hero-title-line">
+            The Best Mexican
+          </span>
+
+          <span className="hero-title-line">
+            Food in the
+          </span>
+
+          <span className="hero-title-line hero-title-accent">
+            Coachella Valley
+          </span>
         </h1>
 
         <p className="hero-subtitle">
-          Comida casera, con el sabor de mi tierra.
+          Auténtica comida mexicana,
+          <span> hecha con amor y tradición.</span>
         </p>
 
         <div className="hero-actions">
@@ -32,6 +42,7 @@ export default function Hero() {
             View Menu
           </a>
         </div>
+
       </div>
 
       {/* Restaurant food photograph */}
@@ -46,6 +57,7 @@ export default function Hero() {
 
       {/* Talavera mosaic wave */}
       <div className="hero-mosaic" aria-hidden="true">
+
         <div className="hero-mosaic-tiles" />
 
         <svg
@@ -68,6 +80,7 @@ export default function Hero() {
             strokeLinejoin="round"
           />
         </svg>
+
       </div>
     </section>
   );

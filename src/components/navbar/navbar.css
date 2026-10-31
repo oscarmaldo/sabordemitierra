@@ -1,9 +1,19 @@
 
 /* ==========================================
-   NAVBAR — DESKTOP
+   SABOR DE MI TIERRA — NAVBAR
+   Navy Navigation + Floating Circular Logo
 ========================================== */
 
 .navbar {
+  --navbar-navy: #082f55;
+  --navbar-navy-light: #10446e;
+  --navbar-gold: #f5b52f;
+  --navbar-gold-border: #dda33d;
+  --navbar-cream: #fff5df;
+
+  --navbar-height: 90px;
+  --navbar-badge-size: 138px;
+
   position: absolute;
   top: 0;
   left: 0;
@@ -11,58 +21,117 @@
 
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
+
+  box-sizing: border-box;
 
   width: 100%;
-  height: var(--nav-height, 90px);
+  height: var(--navbar-height);
+
   padding: 0 var(--page-gutter, 6%);
 
-  background: transparent;
+  background: var(--navbar-navy);
+  border-bottom: 2px solid var(--navbar-gold-border);
+
   font-family: var(--font-body, Arial, sans-serif);
+
+  overflow: visible;
 }
 
-.navbar-brand,
-.navbar-toggle {
-  display: none;
-}
+/* ==========================================
+   FLOATING RESTAURANT LOGO
+========================================== */
 
-/* Navigation links */
-
-.navbar-links {
+.navbar-brand {
   position: absolute;
-  top: 50%;
-  left: 36%;
+  z-index: 35;
+
+  left: var(--page-gutter, 6%);
+  top: 12px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  gap: clamp(26px, 3vw, 52px);
+  box-sizing: border-box;
 
-  transform: translate(-50%, -50%);
+  width: var(--navbar-badge-size);
+  height: var(--navbar-badge-size);
+
+  padding: 12px;
+
+  background: var(--navbar-cream);
+
+  border: 3px solid var(--navbar-gold-border);
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 0 4px rgba(8, 47, 85, 0.10),
+    0 8px 22px rgba(8, 47, 85, 0.22);
+
+  text-decoration: none;
+}
+
+.navbar-brand img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  max-height: none;
+
+  object-fit: contain;
+}
+
+.navbar-brand:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 6px;
+}
+
+/* ==========================================
+   DESKTOP NAVIGATION LINKS
+========================================== */
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 1 1 auto;
+  min-width: 0;
+
+  gap: clamp(24px, 3vw, 48px);
+
+  margin-left: calc(var(--navbar-badge-size) + 45px);
+  margin-right: 25px;
 }
 
 .navbar-links a {
   position: relative;
+
   display: inline-flex;
   align-items: center;
 
   padding: 12px 0;
 
-  color: var(--color-navy, #082f55);
+  color: var(--navbar-cream);
 
   font-size: 15px;
   font-weight: 700;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.3px;
   line-height: 1.3;
+
   text-decoration: none;
   white-space: nowrap;
 
   transition: color 0.2s ease;
 }
 
+/* Animated gold underline */
+
 .navbar-links a::after {
   content: "";
+
   position: absolute;
 
   left: 0;
@@ -71,7 +140,7 @@
 
   height: 2px;
 
-  background: #88350d;
+  background: var(--navbar-gold);
 
   transform: scaleX(0);
   transform-origin: center;
@@ -80,7 +149,7 @@
 }
 
 .navbar-links a:hover {
-  color: #88350d;
+  color: var(--navbar-gold);
 }
 
 .navbar-links a:hover::after,
@@ -89,36 +158,43 @@
 }
 
 .navbar-links a:focus-visible {
-  outline: 2px solid #082f55;
+  outline: 2px solid var(--navbar-gold);
   outline-offset: 5px;
   border-radius: 2px;
 }
 
-/* Primary navigation CTA */
+/* ==========================================
+   VIEW MENU BUTTON
+========================================== */
 
 .navbar-order {
   display: inline-flex;
   align-items: center;
   justify-content: center;
 
+  flex: 0 0 auto;
+
   gap: 10px;
+
+  box-sizing: border-box;
 
   min-height: 46px;
   padding: 12px 24px;
 
-  color: #ffffff;
-  background: #082f55;
+  color: var(--navbar-navy);
+  background: var(--navbar-gold);
 
-  border: 1px solid rgba(255, 255, 255, 0.22);
+  border: 1px solid var(--navbar-gold-border);
   border-radius: 30px;
 
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.2px;
+
   text-decoration: none;
   white-space: nowrap;
 
-  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.14);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.14);
 
   transition:
     background 0.2s ease,
@@ -127,9 +203,10 @@
 }
 
 .navbar-order:hover {
-  background: #10446e;
+  background: #ffcf61;
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
 .navbar-order:focus-visible {
@@ -137,18 +214,46 @@
   outline-offset: 3px;
 }
 
+.navbar-order svg {
+  display: block;
+
+  width: 20px;
+  height: 20px;
+
+  flex-shrink: 0;
+}
+
 /* ==========================================
-   SMALLER DESKTOP / TABLET
+   HAMBURGER HIDDEN ON DESKTOP
+========================================== */
+
+.navbar-toggle {
+  display: none;
+}
+
+/* ==========================================
+   TABLET / SMALL DESKTOP
+   769px — 1100px
 ========================================== */
 
 @media (min-width: 769px) and (max-width: 1100px) {
   .navbar {
+    --navbar-badge-size: 112px;
+
     padding: 0 4%;
   }
 
+  .navbar-brand {
+    left: 4%;
+    top: 12px;
+    padding: 10px;
+  }
+
   .navbar-links {
-    left: 32%;
-    gap: 18px;
+    gap: clamp(14px, 1.8vw, 24px);
+
+    margin-left: calc(var(--navbar-badge-size) + 25px);
+    margin-right: 15px;
   }
 
   .navbar-links a {
@@ -156,6 +261,7 @@
   }
 
   .navbar-order {
+    min-height: 44px;
     padding: 11px 16px;
     font-size: 13px;
   }
@@ -163,74 +269,156 @@
 
 /* ==========================================
    MOBILE NAVBAR
+   768px AND BELOW
 ========================================== */
 
 @media (max-width: 768px) {
   .navbar {
-    height: 105px;
-    padding: 0 20px;
+    --navbar-badge-size: 108px;
+
+    height: 90px;
+    padding: 0 18px;
 
     justify-content: space-between;
+
+    background: var(--navbar-navy);
   }
+
+  /* ======================================
+     HAMBURGER BUTTON
+  ====================================== */
 
   .navbar-toggle {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    padding: 8px;
+    flex: 0 0 auto;
 
-    color: #082f55;
-    background: transparent;
-    border: 0;
+    box-sizing: border-box;
 
-    font-size: 27px;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+
+    color: var(--navbar-cream);
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(221, 163, 61, 0.4);
+    border-radius: 10px;
+
+    font-family: inherit;
+    font-size: 24px;
+    line-height: 1;
+
     cursor: pointer;
+
+    transition:
+      background 0.2s ease,
+      border-color 0.2s ease;
   }
 
+  .navbar-toggle:hover {
+    background: rgba(255, 255, 255, 0.14);
+    border-color: var(--navbar-gold);
+  }
+
+  .navbar-toggle:focus-visible {
+    outline: 3px solid var(--navbar-gold);
+    outline-offset: 3px;
+  }
+
+  /* ======================================
+     CENTERED FLOATING LOGO BADGE
+  ====================================== */
+
   .navbar-brand {
-    display: block;
     position: absolute;
+    z-index: 35;
 
     left: 50%;
-    top: 8px;
+    top: 12px;
+
+    width: var(--navbar-badge-size);
+    height: var(--navbar-badge-size);
+
+    padding: 9px;
 
     transform: translateX(-50%);
   }
 
   .navbar-brand img {
-    display: block;
-    width: 150px;
-    height: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 
+  /* ======================================
+     MOBILE VIEW MENU ICON
+  ====================================== */
+
   .navbar-order {
-    min-height: 42px;
-    padding: 10px;
-    border-radius: 50%;
+    flex: 0 0 auto;
+
+    width: 44px;
+    height: 44px;
+
+    min-width: 44px;
+    min-height: 44px;
+
+    padding: 0;
+
+    color: var(--navbar-navy);
+    background: var(--navbar-gold);
+
+    border-radius: 10px;
+
+    box-shadow: none;
   }
 
   .navbar-order span {
     display: none;
   }
 
-  /* Mobile dropdown */
+  .navbar-order svg {
+    width: 21px;
+    height: 21px;
+  }
+
+  .navbar-order:hover {
+    background: #ffcf61;
+    transform: none;
+    box-shadow: none;
+  }
+
+  /* ======================================
+     MOBILE NAVIGATION DROPDOWN
+  ====================================== */
 
   .navbar-links {
     display: none;
+
     position: absolute;
+    z-index: 10;
 
     top: 100%;
     left: 0;
     right: 0;
 
+    box-sizing: border-box;
+
     width: 100%;
-    padding: 22px;
 
-    transform: none;
+    margin: 0;
+    padding: 16px 18px 20px;
 
-    background: #f7bd43;
+    background: var(--navbar-navy);
 
-    border-top: 1px solid rgba(8, 47, 85, 0.1);
-    box-shadow: 0 12px 24px rgba(8, 47, 85, 0.15);
+    border-top:
+      1px solid rgba(221, 163, 61, 0.35);
+
+    box-shadow:
+      0 12px 24px rgba(8, 47, 85, 0.22);
   }
 
   .navbar-links.active {
@@ -238,19 +426,35 @@
     flex-direction: column;
     align-items: stretch;
 
-    gap: 8px;
+    gap: 5px;
   }
 
   .navbar-links a {
     display: block;
-    padding: 13px 15px;
+
+    padding: 14px 16px;
+
+    color: var(--navbar-cream);
 
     font-size: 15px;
+    font-weight: 700;
+    line-height: 1.4;
+
     border-radius: 8px;
+
+    text-align: left;
+
+    transition:
+      color 0.2s ease,
+      background 0.2s ease;
   }
 
-  .navbar-links a:hover {
-    background: rgba(255, 255, 255, 0.3);
+  .navbar-links a:hover,
+  .navbar-links a:focus-visible {
+    color: var(--navbar-navy);
+    background: var(--navbar-gold);
+
+    outline: none;
   }
 
   .navbar-links a::after {
@@ -258,10 +462,64 @@
   }
 }
 
+/* ==========================================
+   SMALL MOBILE
+   430px AND BELOW
+========================================== */
+
+@media (max-width: 430px) {
+  .navbar {
+    --navbar-badge-size: 98px;
+
+    padding: 0 14px;
+  }
+
+  .navbar-brand {
+    top: 14px;
+    padding: 8px;
+  }
+}
+
+/* ==========================================
+   VERY SMALL PHONES
+   360px AND BELOW
+========================================== */
+
+@media (max-width: 360px) {
+  .navbar {
+    --navbar-badge-size: 88px;
+
+    padding: 0 12px;
+  }
+
+  .navbar-brand {
+    top: 15px;
+    padding: 7px;
+  }
+
+  .navbar-toggle,
+  .navbar-order {
+    width: 40px;
+    height: 40px;
+
+    min-width: 40px;
+    min-height: 40px;
+  }
+
+  .navbar-links {
+    padding: 12px 14px 18px;
+  }
+}
+
+/* ==========================================
+   ACCESSIBILITY
+========================================== */
+
 @media (prefers-reduced-motion: reduce) {
   .navbar-links a,
   .navbar-links a::after,
-  .navbar-order {
+  .navbar-order,
+  .navbar-toggle {
     transition: none;
   }
 
